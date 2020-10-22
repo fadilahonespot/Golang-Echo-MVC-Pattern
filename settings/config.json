@@ -1,0 +1,12 @@
+{
+    "port": {
+        "router": "1337"
+    },
+    "database": {
+        "mysql": "root:@tcp(127.0.0.1:3306)/discussion_crud?parseTime=true"
+    },
+    "asset": {
+        "images": "asset/images/IMG_",
+        "files": "asset/files/"
+    }
+}

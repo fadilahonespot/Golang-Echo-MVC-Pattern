@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "67fba03b-a268-4280-ae49-eb7dd6962416",
+		"name": "Golang-Echo-MVC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"andika\",\r\n    \"email\": \"andika@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Catagory",
+			"item": [
+				{
+					"name": "add catagory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"catagory\": \"ekonomi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/catagory/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"catagory",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view all catagory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/catagory/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"catagory",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Discussion",
+			"item": [
+				{
+					"name": "add discussion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"catagory_id\": 1,\r\n    \"title\": \"Menjalankan perintah go module\",\r\n    \"message\": \"Cara membuat projek golang di manapun dan kapanpun\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/discussion/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add discussion first",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"discussion_id\": 3,\r\n    \"message\": \"ini adalalah balasan dari diskusi nomer satu bagian 7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/discussion/first/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								"first",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add discussion second",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_id\": 1,\r\n    \"discussion_first_id\": 8,\r\n    \"message\": \"ini adalalah balasan dari diskusi nomer satu bagian 6\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/discussion/second/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								"second",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all discussion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/discussion/",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload files discussion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "discussion_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/D:/Fb-y-WA-logo.png",
+										"/D:/fe1e7d1a-dd29-4a92-8832-f718ad64ed49_169.jpeg"
+									]
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/D:/GitHubUserApp.zip"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1337/discussion/upload",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get discussion detail by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/discussion/3",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit discussion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"catagory_id\": 1,\r\n    \"title\": \"Menerapkan clean architektur pada projek\",\r\n    \"message\": \"Mengoptimasi penerapan dan implementasi clear architectur pada setiap projek yang akan di buat\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/discussion/3",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete discussion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/discussion/3",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"discussion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "get example",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/posts/",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
